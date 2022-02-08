@@ -49,7 +49,7 @@ const simpleNoise2 = new SimpleNoiseFilter(
 const minMax = new MinMax()
 const shapeGenerator = new ShapeGenerator([simpleNoise, simpleNoise2], minMax, 1);
 
-const planet = new Planet(3, 1, shapeGenerator);
+const planet = new Planet(50, 1, shapeGenerator);
 planet.generateMesh()
 const geometry = planet.geometry;
 
@@ -132,6 +132,7 @@ const animate = () => {
     // sphere.rotation.x += 0.01;
     // sphere.rotation.y += 0.01;
     renderer.render(scene, camera);
+    // Observe a scene or a renderer
 }
 console.log(scene.toJSON())
 animate();
